@@ -1,4 +1,7 @@
 package array;
+
+import java.util.Arrays;
+
 public class ArrayList {
 	private Object data[]=new Object[1];
 	private int size=0;
@@ -32,6 +35,7 @@ public class ArrayList {
 			data[j] = data[j + 1];
 			}
 			data[size-1] = null;
+			size--;
 		
 	}
 	public void addFirst(Object obj){
@@ -47,20 +51,25 @@ public class ArrayList {
 		num.add("c");
 		num.add("d");
 		num.add("e");
-		num.add("f");
-		num.add("g");
+		num.add("e");
+		num.add("e");
 		System.out.println(num);
 		
 	}
-	public String toString() { 
-		String mem = "[";
-		for (int i = 0; i < size; i++) {			
-			if(i == size-1){
-				mem = mem+data[i]+"]";
-			}else{
-				mem = mem+data[i]+",";
-			}
+	@Override
+	public String toString() {
+		Object arr[] = new Object[size];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = data[i]; 
 		}
-		return mem;
-		 }
+		return Arrays.toString(arr);
+	}
+	public int size() {
+		
+		return size;
+	}
+	public Object get(int i) {
+	Object get=data[i];
+		return get ;
+	}
 }
