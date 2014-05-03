@@ -72,4 +72,5 @@ public class ArrayList {
 	Object get=data[i];
 		return get ;
 	}
+	
 }
